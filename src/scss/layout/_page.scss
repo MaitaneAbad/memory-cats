@@ -32,6 +32,8 @@ font-family: 'Press Start 2P', cursive; */
   height: 60px;
   width: 60px;
   margin: auto;
+  transform-style: preserve-3d;
+  transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
     box-shadow: inset 0 0 0.5rem #fff, 0 0 0.8rem #fff, 0 0 2rem #bc13fe,
       0 0 0.5rem #bc13fe, 0 0 0.5rem #bc13fe, 0 0 0.3rem #bc13fe;
@@ -50,6 +52,7 @@ font-family: 'Press Start 2P', cursive; */
   }
 }
 .backgroundFlip {
+  transform: rotateY(-360deg);
   margin: auto;
   box-shadow: inset 0 0 0.5rem #fff, 0 0 0.8rem #fff, 0 0 2rem #bc13fe,
     0 0 0.5rem #bc13fe, 0 0 0.5rem #bc13fe, 0 0 0.3rem #bc13fe;
@@ -83,7 +86,7 @@ font-family: 'Press Start 2P', cursive; */
   width: 100vw;
   height: 100vh;
   max-width: 100vw;
-  z-index: 0;
+  z-index: 1;
   background-color: rgba(53, 49, 49, 0.795);
 }
 .win {
