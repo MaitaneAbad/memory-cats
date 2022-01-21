@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (cardsChosen[0] === cardsChosen[1]) {
       cards[optionOneId].removeEventListener('click', flipCard);
       cards[optionTwoId].removeEventListener('click', flipCard);
-      cards[optionOneId].classList.add('backgroundFlip');
-      cards[optionTwoId].classList.add('backgroundFlip');
+      cards[optionOneId].classList.toggle('backgroundFlip');
+      cards[optionTwoId].classList.toggle('backgroundFlip');
       cardsWon.push(cardsChosen);
     } else {
       cards[optionOneId].setAttribute('src', './assets/images/background.jpg');
