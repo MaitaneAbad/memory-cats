@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionTwoId = cardsChosenId[1];
 
     if (optionOneId === optionTwoId) {
-      cards[optionOneId].setAttribute('src', './assets/images/background.jpg');
-      cards[optionTwoId].setAttribute('src', './assets/images/background.jpg');
+      // cards[optionOneId].setAttribute('src', './assets/images/background.jpg');
+      // cards[optionTwoId].setAttribute('src', './assets/images/background.jpg');
     } else if (cardsChosen[0] === cardsChosen[1]) {
       cards[optionOneId].removeEventListener('click', flipCard);
       cards[optionTwoId].removeEventListener('click', flipCard);
@@ -83,12 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //flip your card
   function flipCard() {
     let cardId = this.getAttribute('data-id');
-
     cardsChosen.push(cardArray[cardId].name);
     cardsChosenId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
-    console.log(cardsChosen);
-    console.log(cardsChosenId);
     if (cardsChosen.length === 2) {
       setTimeout(checkForMatch, 400);
     }
