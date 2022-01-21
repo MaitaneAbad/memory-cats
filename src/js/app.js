@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cardsWon.length === cardArray.length / 2) {
       score.textContent = ' ';
       resultDisplayWin.textContent = 'Congratulations! You found them all!';
+      buttonResetWin.classList.add('containerWin');
       const button = document.createElement('button');
       button.textContent = 'Reset';
       button.setAttribute('class', 'buttonReset');
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosenId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
     if (cardsChosen.length === 2) {
-      setTimeout(checkForMatch, 1000);
+      setTimeout(checkForMatch, 500);
     }
   }
 
