@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', './assets/images/background.jpg');
       cards[optionTwoId].setAttribute('src', './assets/images/background.jpg');
     } else if (cardsChosen[0] === cardsChosen[1]) {
+      cards.classList.toggle('border');
       cards[optionOneId].removeEventListener('click', flipCard);
       cards[optionTwoId].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen);
